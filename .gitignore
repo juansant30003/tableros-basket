@@ -1,0 +1,14 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Deploy artifacts / local scripts
+.claude/
+.last-deploy-hash
+
+# Editor
+.vscode/
+.idea/

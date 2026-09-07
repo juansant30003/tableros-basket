@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WC2Q5629');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>ARCOSUY · Tableros de Basket · Chapa, Acrílico, Fibra y Vidrio Reglamentario</title>
+  <meta name="description" content="Tableros de basket a medida en Uruguay: tablero de chapa, tablero de acrílico, tablero de fibra reglamentario y tablero de vidrio reglamentario. Fabricación e instalación para clubes, complejos deportivos e instituciones educativas." />
+  <style>
+    :root {
+      --cyan: #069dec;
+      --bg: #0d1b2a;
+      --bg2: #0f2033;
+      --bg3: #111d2e;
+      --nav-bg: rgba(10,22,35,0.95);
+      --white: #ffffff;
+      --muted: #8ba3b8;
+      --card-bg: #0f2033;
+      --green: #25d366;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 56px;
+      background: var(--nav-bg);
+      backdrop-filter: blur(8px);
+    }
+
+    .logo-img {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo-img img {
+      height: 32px;
+      width: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    nav ul a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+    nav ul a:hover { color: var(--white); }
+
+    .btn-nav {
+      background: var(--cyan);
+      color: #0a1620 !important;
+      padding: 8px 22px;
+      border-radius: 999px;
+      font-weight: 700 !important;
+      font-size: .85rem !important;
+      transition: opacity .2s;
+    }
+    .btn-nav:hover { opacity: .85; }
+
+    /* ── HERO ── */
+    #hero { position: relative; min-height: 60vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--bg); }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,22,35,0.96) 0%, rgba(10,22,35,0.88) 60%, rgba(10,22,35,0.78) 100%), url('img/hero.jpg') 60% center/cover no-repeat; z-index: 0; filter: saturate(.8); }
+    .hero-content { position: relative; z-index: 1; padding: 80px 5% 50px; max-width: 1200px; width: 100%; margin: 0 auto; padding-left: 12%; }
+    .hero-badge { display: inline-block; border: 1px solid var(--cyan); color: var(--cyan); font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; margin-bottom: 16px; }
+    .hero-content h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 900; text-transform: uppercase; line-height: 1.02; letter-spacing: -1px; margin-bottom: 18px; max-width: 900px; }
+    .hero-content h1 .accent { color: var(--cyan); }
+    .hero-desc { color: var(--muted); font-size: .92rem; max-width: 520px; margin-bottom: 22px; line-height: 1.55; }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #0a1620;
+      padding: 13px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .9rem;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .btn-primary:hover { opacity: .85; }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 13px 28px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,.3);
+      font-weight: 600;
+      font-size: .9rem;
+      text-decoration: none;
+      transition: border-color .2s;
+    }
+    .btn-outline:hover { border-color: var(--white); }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-stat-num {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: .7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 4px;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 100px 8%;
+    }
+    .section:nth-child(even) { background: var(--bg2); }
+    .section:nth-child(odd)  { background: var(--bg); }
+
+    .section-num {
+      font-size: .72rem;
+      color: var(--cyan);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -.5px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      font-size: .97rem;
+      max-width: 600px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+
+    /* ── IMAGE GRIDS ── */
+    .img-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .img-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .img-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .img-grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 12px;
+    }
+    .img-grid-2x2 > .img-wrap,
+    .img-grid-2x2 > .img-wrap.medium,
+    .img-grid-2x2 > .img-wrap.tall,
+    .img-grid-2x2 > .img-wrap.short {
+      aspect-ratio: 1 / 1;
+      min-height: 0;
+    }
+
+    .img-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #162333;
+    }
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .img-wrap.tall { min-height: 300px; }
+    .img-wrap.medium { min-height: 220px; }
+    .img-wrap.short { min-height: 160px; }
+
+    /* placeholder when no image */
+    .img-ph {
+      width: 100%;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #162333, #0d1b2a);
+      font-size: 2.5rem;
+      color: rgba(6, 157, 236,.3);
+    }
+
+    .img-tag {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: var(--cyan);
+      color: #0a1620;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    /* ── SPLIT LAYOUT (text left / images right) ── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .split-rev {
+      grid-template-columns: 1.4fr 1fr;
+    }
+    .split-rev .split-text { order: 2; }
+    .split-rev .split-imgs { order: 1; }
+
+    /* ── SUBSECTION WITHIN SECTION ── */
+    .subsection { margin-bottom: 72px; }
+    .subsection:last-child { margin-bottom: 0; }
+
+    .subsection-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--cyan);
+      margin-bottom: 10px;
+    }
+    .subsection-desc {
+      color: var(--muted);
+      font-size: .92rem;
+      max-width: 500px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    /* ── EQUIPMENT CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .eq-card {
+      background: var(--bg3);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(6, 157, 236,.08);
+    }
+    .eq-card-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #162333;
+    }
+    .eq-card-ph {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #162333, #0d1b2a);
+      font-size: 2.5rem;
+      color: rgba(6, 157, 236,.3);
+      overflow: hidden;
+      position: relative;
+    }
+    .eq-card-ph img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .eq-card-body { padding: 24px; }
+    .eq-card-body h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .eq-card-body p {
+      color: var(--muted);
+      font-size: .87rem;
+      line-height: 1.65;
+    }
+
+    /* ── CONTACT ── */
+    #contacto {
+      background: var(--bg3);
+      padding: 100px 8%;
+    }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .contact-label {
+      font-size: .72rem;
+      color: var(--cyan);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .contact-title {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -.5px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .contact-desc {
+      color: var(--muted);
+      font-size: .97rem;
+      line-height: 1.7;
+    }
+    .contact-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .btn-whatsapp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--green);
+      color: #fff;
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .btn-whatsapp:hover { opacity: .88; }
+    .btn-whatsapp svg { width: 20px; height: 20px; fill: #fff; }
+
+    .btn-email {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--white);
+      padding: 15px 28px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,.25);
+      font-weight: 600;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: border-color .2s;
+    }
+    .btn-email:hover { border-color: var(--white); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #091522;
+      padding: 60px 8% 0;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      align-items: start;
+    }
+    .footer-col p a {
+      color: rgba(255,255,255,.6);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-col p a:hover { color: var(--cyan); }
+    .footer-brand p {
+      color: var(--muted);
+      font-size: .85rem;
+      margin-top: 10px;
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+    .social-links a:hover {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+    }
+    .social-links svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--white);
+    }
+    .social-links a:hover svg { fill: #0a1620; }
+    .footer-col h4 {
+      font-size: .72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul a {
+      color: rgba(255,255,255,.6);
+      text-decoration: none;
+      font-size: .88rem;
+      transition: color .2s;
+    }
+    .footer-col ul a:hover { color: var(--white); }
+    .footer-col p {
+      color: rgba(255,255,255,.6);
+      font-size: .88rem;
+      margin-bottom: 8px;
+    }
+    .footer-bottom {
+      padding: 20px 0;
+      text-align: center;
+      color: rgba(255,255,255,.25);
+      font-size: .78rem;
+    }
+
+    /* ── CLIENTES ── */
+    #clientes { padding: 80px 0 72px; background: var(--bg2); overflow: hidden; }
+    .clientes-header { padding: 0 8%; margin-bottom: 52px; }
+    .logos-wrap { position: relative; overflow: hidden; }
+    .logos-wrap::before, .logos-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none; }
+    .logos-wrap::before { left: 0; background: linear-gradient(90deg, var(--bg2), transparent); }
+    .logos-wrap::after { right: 0; background: linear-gradient(270deg, var(--bg2), transparent); }
+    .logos-track { display: flex; align-items: center; gap: 64px; width: max-content; animation: logoScroll 55s linear infinite; padding: 14px 40px; }
+    .logos-track:hover { animation-play-state: paused; }
+    @keyframes logoScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .logo-item { flex-shrink: 0; display: flex; align-items: center; }
+    .logo-item img { height: 110px; width: auto; max-width: 250px; object-fit: contain; filter: brightness(0) invert(1); opacity: .45; transition: opacity .25s; }
+    .logo-item img.logo-sm { height: 70px; max-width: 160px; }
+    .logo-item:hover img { opacity: .95; }
+
+    /* ── LIGHTBOX / GALLERY ── */
+    .img-wrap img,
+    .eq-card-ph img {
+      cursor: zoom-in;
+    }
+    .more-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(13, 27, 42, .65);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background .2s;
+      z-index: 2;
+    }
+    .more-overlay:hover { background: rgba(13, 27, 42, .8); }
+    .more-overlay .plus {
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1;
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      background: rgba(6, 157, 236,.85);
+      color: #0a1620;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,.3);
+    }
+    .more-overlay .label {
+      font-size: .72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Pill variant for cerramientos & equipamiento */
+    .more-overlay.pill {
+      inset: auto;
+      bottom: 12px;
+      right: 12px;
+      flex-direction: row;
+      gap: 8px;
+      padding: 8px 14px 8px 8px;
+      background: rgba(13, 27, 42, .88);
+      backdrop-filter: blur(4px);
+      border-radius: 999px;
+      border: 1px solid rgba(6, 157, 236,.4);
+      z-index: 3;
+    }
+    .more-overlay.pill:hover {
+      background: var(--cyan);
+      transform: translateY(-2px);
+    }
+    .more-overlay.pill:hover .plus { background: #0a1620; color: var(--cyan); }
+    .more-overlay.pill:hover .label { color: #0a1620; }
+    .more-overlay.pill .plus {
+      font-size: 1.2rem;
+      width: 28px;
+      height: 28px;
+      box-shadow: none;
+      background: var(--cyan);
+      transition: background .2s, color .2s;
+    }
+    .more-overlay.pill .label {
+      font-size: .68rem;
+      letter-spacing: 1.5px;
+      transition: color .2s;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,.94);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 70px;
+      animation: lb-fade .2s ease;
+      user-select: none;
+      touch-action: pan-y;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.6);
+      pointer-events: none;
+    }
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: none;
+      color: #fff;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s, transform .2s;
+      z-index: 2;
+    }
+    .lightbox-close { top: 20px; right: 24px; }
+    .lightbox-prev  { left: 24px; top: 50%; transform: translateY(-50%); }
+    .lightbox-next  { right: 24px; top: 50%; transform: translateY(-50%); }
+    .lightbox-close:hover { background: rgba(255,255,255,.25); }
+    .lightbox-prev:hover  { background: rgba(255,255,255,.25); transform: translateY(-50%) translateX(-2px); }
+    .lightbox-next:hover  { background: rgba(255,255,255,.25); transform: translateY(-50%) translateX(2px); }
+    .lightbox-counter {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,.7);
+      font-size: .85rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+    @keyframes lb-fade { from { opacity: 0 } to { opacity: 1 } }
+
+    @media (max-width: 600px) {
+      .lightbox { padding: 60px 12px; }
+      .lightbox-prev, .lightbox-next { width: 40px; height: 40px; }
+      .lightbox-prev { left: 8px; }
+      .lightbox-next { right: 8px; }
+    }
+
+    /* ── FLOATING WHATSAPP ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 500;
+      width: 52px;
+      height: 52px;
+      background: var(--green);
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      transition: transform .2s;
+    }
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .split { grid-template-columns: 1fr; gap: 36px; }
+      .split-rev .split-text { order: 1; }
+      .split-rev .split-imgs { order: 2; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      nav ul { display: none; }
+      .cards-grid { grid-template-columns: 1fr; }
+
+      /* Tablero cards contained (mobile) */
+      #tablero-chapa, #tablero-acrilico, #tablero-fibra, #tablero-vidrio { padding: 22px 5%; }
+      #tablero-chapa .split, #tablero-acrilico .split, #tablero-fibra .split, #tablero-vidrio .split {
+        background: var(--bg2);
+        border-radius: 16px;
+        overflow: hidden;
+        gap: 0;
+      }
+      #tablero-chapa .split-imgs, #tablero-acrilico .split-imgs, #tablero-fibra .split-imgs, #tablero-vidrio .split-imgs { order: 1; }
+      #tablero-chapa .split-text, #tablero-acrilico .split-text, #tablero-fibra .split-text, #tablero-vidrio .split-text { order: 2; padding: 28px 24px 32px; }
+      #tablero-chapa .img-wrap, #tablero-acrilico .img-wrap, #tablero-fibra .img-wrap, #tablero-vidrio .img-wrap { border-radius: 0; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 70px 6%; }
+      #hero { min-height: 50vh; }
+      .hero-bg { background-position: center center, center center; background-size: cover, cover; }
+      .hero-content { padding: 100px 6% 60px; }
+      .img-grid-3 { grid-template-columns: 1fr 1fr; }
+      .img-grid-2 { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  
+/* MM-NAV-CSS */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 56px; background: rgba(10,22,35,0.95); backdrop-filter: blur(8px); }
+.logo-img { display: flex; align-items: center; text-decoration: none; }
+.logo-img img { height: 32px; width: auto; display: block; filter: brightness(0) invert(1); }
+nav ul.nav-menu { display: flex; align-items: center; gap: 26px; list-style: none; margin: 0; padding: 0; }
+nav ul.nav-menu > li { position: relative; }
+nav ul.nav-menu a { color: #8ba3b8; text-decoration: none; font-size: .85rem; transition: color .2s; display: inline-flex; align-items: center; gap: 4px; }
+nav ul.nav-menu a:hover { color: #fff; }
+.btn-nav { background: #069dec; color: #0a1620 !important; padding: 8px 22px; border-radius: 999px; font-weight: 700 !important; font-size: .85rem !important; transition: opacity .2s; }
+.btn-nav:hover { opacity: .85; }
+.nav-menu .chev { font-size: .65rem; opacity: .7; transition: transform .2s; }
+.nav-menu .has-dropdown:hover > a .chev { transform: rotate(180deg); }
+.nav-menu .dropdown, .nav-menu .submenu { position: absolute; top: 100%; left: -12px; min-width: 240px; background: rgba(15,32,51,0.98); backdrop-filter: blur(8px); border: 1px solid rgba(6,157,236,.18); border-radius: 10px; padding: 8px 0; margin: 0; list-style: none; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .18s, transform .18s, visibility .18s; z-index: 250; box-shadow: 0 12px 32px rgba(0,0,0,.4); }
+.nav-menu .has-dropdown:hover > .dropdown, .nav-menu .has-submenu:hover > .submenu { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-menu .dropdown li, .nav-menu .submenu li { padding: 0; margin: 0; }
+.nav-menu .dropdown a, .nav-menu .submenu a { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; font-size: .82rem; width: 100%; }
+.nav-menu .dropdown a:hover, .nav-menu .submenu a:hover { background: rgba(6,157,236,.08); color: #fff; }
+.nav-menu .has-submenu { position: relative; }
+.nav-menu .has-submenu > .submenu { top: -8px; left: 100%; margin-left: 4px; transform: translateX(-6px); }
+.nav-menu .has-submenu:hover > .submenu { transform: translateX(0); }
+.nav-menu .has-submenu > a .chev-right { font-size: .8rem; opacity: .6; }
+.nav-toggle { display: none; background: none; border: 0; color: #fff; cursor: pointer; padding: 4px; }
+.nav-toggle svg { width: 26px; height: 26px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+.breadcrumb { position: fixed; top: 56px; left: 0; right: 0; z-index: 199; background: rgba(10,22,35,0.85); backdrop-filter: blur(6px); padding: 10px 5%; font-size: .78rem; border-bottom: 1px solid rgba(6,157,236,.08); }
+.breadcrumb ol { display: flex; align-items: center; gap: 8px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.breadcrumb li { display: inline-flex; align-items: center; gap: 8px; color: #8ba3b8; }
+.breadcrumb a { color: #8ba3b8; text-decoration: none; transition: color .2s; }
+.breadcrumb a:hover { color: #069dec; }
+.breadcrumb li[aria-current="page"] { color: #fff; }
+.breadcrumb li + li::before { content: "\203A"; color: rgba(139,163,184,.4); }
+body { padding-top: 42px; }
+@media (max-width: 1100px) {
+  .nav-toggle { display: inline-flex; align-items: center; }
+  nav ul.nav-menu { position: fixed; top: 56px; left: 0; right: 0; background: rgba(10,22,35,0.98); backdrop-filter: blur(10px); flex-direction: column; align-items: stretch; gap: 0; padding: 12px 0; max-height: 0; overflow: hidden; border-bottom: 1px solid rgba(6,157,236,.12); transition: max-height .28s ease-in-out; }
+  nav ul.nav-menu.open { max-height: calc(100vh - 56px); overflow-y: auto; overflow-x: hidden; }
+  nav ul.nav-menu > li { border-top: 1px solid rgba(255,255,255,.05); position: static; }
+  nav ul.nav-menu > li:first-child { border-top: 0; }
+  nav ul.nav-menu > li > a { padding: 14px 24px; font-size: .95rem; width: 100%; justify-content: space-between; }
+  .nav-menu .btn-nav { background: transparent !important; color: rgba(255,255,255,.75) !important; padding: 14px 24px !important; border-radius: 0 !important; margin: 0 !important; justify-content: flex-start !important; font-weight: 600 !important; font-size: .82rem !important; }
+  .nav-menu .btn-nav:hover { color: #069dec !important; }
+  .nav-menu .dropdown, .nav-menu .submenu { position: static; opacity: 1; visibility: visible; transform: none; max-height: 0; overflow: hidden; transition: max-height .3s ease; background: rgba(6,157,236,.05); border: 0; border-radius: 0; box-shadow: none; padding: 0; min-width: 0; margin: 0; }
+  .nav-menu .has-dropdown.open > .dropdown, .nav-menu .has-submenu.open > .submenu { max-height: 600px; }
+  .nav-menu .dropdown a, .nav-menu .submenu a { padding: 12px 40px; font-size: .88rem; }
+  .nav-menu .submenu a { padding-left: 56px; background: rgba(6,157,236,.03); }
+  .nav-menu .has-dropdown.open > a .chev { transform: rotate(180deg); }
+  .nav-menu .has-submenu.open > a .chev-right { transform: rotate(90deg); }
+  .breadcrumb { padding: 8px 5%; font-size: .72rem; }
+}
+    .social-group { margin-bottom: 18px; }
+    .social-group:last-child { margin-bottom: 0; }
+    .social-label { font-size: .7rem; color: var(--muted); font-weight: 600; letter-spacing: .5px; display: block; margin-bottom: 8px; }
+    .social-links { display: flex; gap: 10px; margin-top: 0; }
+    .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); transition: background .2s, border-color .2s, transform .2s; }
+    .social-links a:hover { background: var(--cyan); border-color: var(--cyan); transform: translateY(-2px); }
+    .social-links svg { width: 16px; height: 16px; fill: var(--white); }
+    .social-links a:hover svg { fill: #0a1620; }
+    .footer-simple .footer-brand p { max-width: 320px; }
+  
+    @media (max-width: 640px) { #hero .hero-desc { display: none; } }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2338746369733227');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2338746369733227&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC2Q5629"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav>
+  <a href="https://arcosuy.com/" class="logo-img">
+    <img loading="lazy" decoding="async" src="img/logo.png" alt="ARCOSUY" height="32" />
+  </a>
+  <button class="nav-toggle" aria-label="Men" aria-expanded="false">
+    <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+  </button>
+  <ul class="nav-menu">
+    <li><a href="https://arcosuy.com/">Inicio</a></li>
+    <li class="has-dropdown">
+      <a href="#">Cerramientos <span class="chev">&#9662;</span></a>
+      <ul class="dropdown">
+        <li class="has-submenu">
+          <a href="#">Opciones de cerramientos <span class="chev chev-right">&#8250;</span></a>
+          <ul class="submenu">
+            <li><a href="https://arcosuy.com/productos/cerramientos/">Cerramientos con tejido</a></li>
+            <li><a href="https://arcosuy.com/productos/cercos-modulares/">Cercos modulares</a></li>
+            <li><a href="https://arcosuy.com/productos/muros-premoldeados/">Muros premoldeados</a></li>
+            <li><a href="https://arcosuy.com/productos/polines/">Polines tratados</a></li>
+            <li><a href="https://arcosuy.com/productos/cerramientos-deportivos/">Cerramientos deportivos</a></li>
+            <li><a href="https://arcosuy.com/productos/portones/">Portones</a></li>
+          </ul>
+        </li>
+        <li><a href="https://arcosuy.com/productos/columnas/">Columnas de hormigón</a></li>
+        <li><a href="https://arcosuy.com/productos/proyectos/">Proyectos realizados</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="#">Equipamiento deportivo <span class="chev">&#9662;</span></a>
+      <ul class="dropdown">
+        <li><a href="https://arcosuy.com/productos/arcos/">Arcos de fútbol</a></li>
+        <li><a href="https://arcosuy.com/productos/deportivo/">Otros deportes</a></li>
+        <li><a href="https://arcosuy.com/productos/tableros-de-basket/">Tableros de basket</a></li>
+      </ul>
+    </li>
+    <li class="has-dropdown">
+      <a href="#">Construcción <span class="chev">&#9662;</span></a>
+      <ul class="dropdown">
+        <li><a href="https://arcosuy.com/productos/andamios/">Andamios</a></li>
+        <li><a href="https://arcosuy.com/productos/vallas/">Vallas</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="https://arcosuy.com/#nosotros">Nosotros</a></li>
+    <li><a href="https://wa.me/59892630761?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20ARCOSUY" target="_blank" rel="noopener" class="btn-nav">Contacto</a></li>
+  </ul>
+</nav>
+<nav class="breadcrumb" aria-label="Ubicación">
+  <ol>
+    <li><a href="https://arcosuy.com/">Inicio</a></li>
+    <li><a href="https://arcosuy.com/productos/deportivo-opciones/">Equipamiento deportivo</a></li>
+    <li aria-current="page">Tableros de basket</li>
+  </ol>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>
+      Tableros de <span class="accent">basket</span>
+    </h1>
+  </div>
+</section>
+
+<style>
+  .feature-list { list-style: none; padding: 0; margin: 24px 0 0 0; }
+  .feature-list li { padding: 10px 0; border-top: 1px solid rgba(139,163,184,.15); color: var(--muted); font-size: .95rem; line-height: 1.5; }
+  .feature-list li:last-child { border-bottom: 1px solid rgba(139,163,184,.15); }
+  .feature-list strong { color: var(--white); font-weight: 700; margin-right: 6px; }
+  .btn-wa { display:inline-flex; align-items:center; gap:8px; margin-top:24px; background:var(--cyan); color:#0a1620; padding:13px 28px; border-radius:999px; font-weight:700; font-size:.9rem; text-decoration:none; transition:opacity .2s; }
+  .btn-wa:hover { opacity:.85; }
+  .btn-wa svg { width:16px; height:16px; fill:currentColor; }
+  /* Specs collapsible */
+  .specs-toggle { display:inline-flex; align-items:center; justify-content:space-between; gap:14px; background:transparent; color:var(--white); border:1.5px solid rgba(255,255,255,.25); padding:11px 22px; border-radius:999px; font-size:.82rem; font-weight:700; letter-spacing:.5px; text-transform:uppercase; cursor:pointer; margin-top:20px; transition:border-color .2s, color .2s; font-family:inherit; }
+  .specs-toggle:hover { border-color:var(--cyan); color:var(--cyan); }
+  .specs-toggle .chev { width:14px; height:14px; transition:transform .25s ease; }
+  .specs-toggle[aria-expanded="true"] .chev { transform:rotate(180deg); }
+  .specs-content { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+  .specs-content.open { max-height:600px; }
+  /* Desktop: hide toggle, always show specs */
+  @media (min-width: 901px) {
+    .specs-toggle { display: none !important; }
+    .specs-content { max-height: none !important; overflow: visible !important; }
+  }
+  /* Size selector */
+  .price-box { margin: 22px 0 8px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .price-box .amount { font-size: 2rem; font-weight: 900; color: var(--cyan); line-height: 1; }
+  .price-box .unit { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; }
+  .size-selector { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 4px; }
+  .size-selector button { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.25); padding: 8px 16px; border-radius: 999px; font-size: .82rem; font-weight: 600; cursor: pointer; transition: all .2s; font-family: inherit; }
+  .size-selector button:hover { border-color: var(--cyan); color: var(--cyan); }
+  .size-selector button.active { background: var(--cyan); border-color: var(--cyan); color: #0a1620; }
+  .size-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px; }
+  .size-pill { display: inline-block; background: var(--cyan); color: #0a1620; padding: 8px 18px; border-radius: 999px; font-size: .82rem; font-weight: 700; margin: 16px 0 4px; letter-spacing: .5px; }
+  /* Models note (info bar) */
+  .models-note { margin: 60px 0 0; padding: 24px 28px; background: var(--bg3); border: 1px solid rgba(6,157,236,.12); border-left: 3px solid var(--cyan); border-radius: 12px; max-width: 760px; }
+  .models-note h4 { font-size: .72rem; color: var(--cyan); letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+  .models-note ul { list-style: none; padding: 0; margin: 0; }
+  .models-note li { position: relative; padding-left: 18px; margin-bottom: 9px; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+  .models-note li:last-child { margin-bottom: 0; }
+  .models-note li::before { content: ''; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); }
+</style>
+
+<!-- 01 · TABLERO DE CHAPA -->
+<section class="section" id="tablero-chapa">
+  <div class="split">
+    <div class="split-text">
+      <p class="section-num">01 / Tableros</p>
+      <h2 class="section-title">Chapa</h2>
+      <p class="section-desc">
+        Tablero tradicional de chapa, ideal para instalaciones educativas y espacios recreativos.
+      </p>
+      <div class="price-box">
+        <span class="amount" id="price-chapa">$21.400</span>
+        <span class="unit">Precio unitario</span>
+      </div>
+      <p class="size-label">Elegí la medida</p>
+      <div class="size-selector" data-target="price-chapa" data-wa="wa-chapa">
+        <button type="button" data-price="$21.400" data-size="1.35 × 0.70 m" class="active">1.35 × 0.70 m</button>
+        <button type="button" data-price="$30.600" data-size="1.60 × 0.90 m">1.60 × 0.90 m</button>
+        <button type="button" data-price="$43.000" data-size="1.80 × 1.05 m">1.80 × 1.05 m</button>
+      </div>
+      <button type="button" class="specs-toggle" aria-expanded="false">
+        <span>Ver especificaciones</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="specs-content">
+      <ul class="feature-list">
+        <li><strong>Tablero:</strong> chapa calibre 16 con protección inferior</li>
+        <li><strong>Aro:</strong> reglamentario de 45 cm, con red</li>
+      </ul>
+      </div>
+      <a class="btn-wa" id="wa-chapa" href="https://wa.me/59892630761?text=Hola%2C%20estoy%20interesado%20en%20el%20tablero%20de%20chapa%20(1.60%20%C3%97%200.90%20m).%20%C2%BFMe%20pas%C3%A1s%20una%20cotizaci%C3%B3n%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Cotizar
+      </a>
+    </div>
+    <div class="split-imgs">
+      <div class="img-wrap" style="aspect-ratio:1/1;">
+        <img loading="lazy" decoding="async" src="img/chapa-1.jpg" alt="Tablero de basket de chapa" onerror="this.parentElement.innerHTML='<div class=\'img-ph\' style=\'aspect-ratio:1/1;min-height:0\'>🏀</div>'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · TABLERO DE ACRÍLICO -->
+<section class="section" id="tablero-acrilico">
+  <div class="split split-rev">
+    <div class="split-imgs">
+      <div class="img-wrap" style="aspect-ratio:1/1;">
+        <img loading="lazy" decoding="async" src="img/acrilico-1.jpg" alt="Tablero de basket de acrílico" onerror="this.parentElement.innerHTML='<div class=\'img-ph\' style=\'aspect-ratio:1/1;min-height:0\'>🏀</div>'" />
+      </div>
+    </div>
+    <div class="split-text">
+      <p class="section-num">02 / Tableros</p>
+      <h2 class="section-title">Acrílico</h2>
+      <p class="section-desc">
+        Opción intermedia para los que quieran un tablero de uso recreativo que cumpla con todos los requisitos sin sacrificar calidad ni resistencia.
+      </p>
+      <div class="price-box">
+        <span class="amount">$33.000</span>
+        <span class="unit">Precio unitario</span>
+      </div>
+      <span class="size-pill">1.20 × 0.80 m</span>
+      <button type="button" class="specs-toggle" aria-expanded="false">
+        <span>Ver especificaciones</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="specs-content">
+      <ul class="feature-list">
+        <li><strong>Tablero:</strong> 1.20 × 0.80 m en acrílico, con protección inferior</li>
+        <li><strong>Aro:</strong> reglamentario de 45 cm, con red</li>
+      </ul>
+      </div>
+      <a class="btn-wa" href="https://wa.me/59892630761?text=Hola%2C%20estoy%20interesado%20en%20el%20tablero%20de%20acr%C3%ADlico.%20%C2%BFMe%20pas%C3%A1s%20una%20cotizaci%C3%B3n%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Cotizar
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · TABLERO DE FIBRA REGLAMENTARIO -->
+<section class="section" id="tablero-fibra">
+  <div class="split">
+    <div class="split-text">
+      <p class="section-num">03 / Tableros</p>
+      <h2 class="section-title">Fibra<br>reglamentario</h2>
+      <p class="section-desc">
+        Tablero profesional pensado para uso intensivo, apto para exteriores e interiores. Su compuesto de fibra de vidrio le brinda una gran resistencia para un nivel de juego exigente.
+      </p>
+      <div class="price-box">
+        <span class="amount">$78.000</span>
+        <span class="unit">Precio unitario</span>
+      </div>
+      <span class="size-pill">1.80 × 1.05 m</span>
+      <button type="button" class="specs-toggle" aria-expanded="false">
+        <span>Ver especificaciones</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="specs-content">
+      <ul class="feature-list">
+        <li><strong>Tablero:</strong> 1.80 × 1.05 m reglamentario en fibra de alta densidad, con protección inferior</li>
+        <li><strong>Aro:</strong> reglamentario de 45 cm, con red</li>
+      </ul>
+      </div>
+      <a class="btn-wa" href="https://wa.me/59892630761?text=Hola%2C%20estoy%20interesado%20en%20el%20tablero%20de%20fibra%20reglamentario.%20%C2%BFMe%20pas%C3%A1s%20una%20cotizaci%C3%B3n%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Cotizar
+      </a>
+    </div>
+    <div class="split-imgs">
+      <div class="img-wrap" style="aspect-ratio:1/1;">
+        <img loading="lazy" decoding="async" src="img/fibra-1.jpg" alt="Tablero de basket de fibra reglamentario" onerror="this.parentElement.innerHTML='<div class=\'img-ph\' style=\'aspect-ratio:1/1;min-height:0\'>🏀</div>'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · TABLERO DE VIDRIO REGLAMENTARIO -->
+<section class="section" id="tablero-vidrio">
+  <div class="split split-rev">
+    <div class="split-imgs">
+      <div class="img-wrap" style="aspect-ratio:1/1;">
+        <img loading="lazy" decoding="async" src="img/vidrio-1.jpg" alt="Tablero de basket de vidrio reglamentario" onerror="this.parentElement.innerHTML='<div class=\'img-ph\' style=\'aspect-ratio:1/1;min-height:0\'>🏀</div>'" />
+      </div>
+    </div>
+    <div class="split-text">
+      <p class="section-num">04 / Tableros</p>
+      <h2 class="section-title">Vidrio templado<br>reglamentario</h2>
+      <p class="section-desc">
+        Máxima categoría — tablero reglamentario en vidrio templado irrompible sobre marco metálico reforzado. Excelente efecto rebote del balón que permite un juego ágil y fluido. Apto para ligas oficiales y complejos de primer nivel.
+      </p>
+      <div class="price-box">
+        <span class="amount">$117.000</span>
+        <span class="unit">Precio unitario</span>
+      </div>
+      <span class="size-pill">1.80 × 1.05 m</span>
+      <button type="button" class="specs-toggle" aria-expanded="false">
+        <span>Ver especificaciones</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="specs-content">
+      <ul class="feature-list">
+        <li><strong>Tablero:</strong> 1.80 × 1.05 m reglamentario en vidrio templado de alta resistencia, con protección inferior</li>
+        <li><strong>Aro:</strong> reglamentario de 45 cm, con doble resorte y red</li>
+      </ul>
+      </div>
+      <a class="btn-wa" href="https://wa.me/59892630761?text=Hola%2C%20estoy%20interesado%20en%20el%20tablero%20de%20vidrio%20reglamentario.%20%C2%BFMe%20pas%C3%A1s%20una%20cotizaci%C3%B3n%3F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Cotizar
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMACIÓN IMPORTANTE -->
+<section class="section" style="padding:40px 8% 100px;">
+  <div class="models-note">
+    <h4>Información importante</h4>
+    <ul>
+      <li>Precios expresados por unidad + IVA.</li>
+      <li>Los valores corresponden a producto retirado en taller: no incluyen traslado ni instalación.</li>
+      <li>Instalación y traslado se cotizan aparte.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top footer-simple">
+    <div class="footer-brand">
+      <a href="https://arcosuy.com/" class="logo-img">
+        <img loading="lazy" decoding="async" src="img/logo.png" alt="ARCOSUY" height="34" />
+      </a>
+      <p>Organización uruguaya con más de 10 años de trayectoria. Cerramientos, equipamiento deportivo y estructuras metálicas de construcción, todo en un solo lugar en todo Uruguay.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p><a href="mailto:ventas@arcosuy.com">ventas@arcosuy.com</a></p>
+      <p><a href="https://wa.me/59892630761?text=Hola%2C%20quiero%20hacer%20una%20consulta%20a%20ARCOSUY" target="_blank" rel="noopener">092 630 761</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Redes</h4>
+      <div class="social-group">
+        <span class="social-label">ARCOSUY</span>
+        <div class="social-links">
+          <a href="https://www.instagram.com/arcosuy/" target="_blank" rel="noopener" aria-label="Instagram ARCOSUY">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Arcosuy" target="_blank" rel="noopener" aria-label="Facebook ARCOSUY">
+            <svg viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="social-group">
+        <span class="social-label">ARCOSUY Cerramientos</span>
+        <div class="social-links">
+          <a href="https://www.instagram.com/arcosuy.cerramientos/" target="_blank" rel="noopener" aria-label="Instagram ARCOSUY Cerramientos">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Arcosuy.Cerramientos" target="_blank" rel="noopener" aria-label="Facebook ARCOSUY Cerramientos">
+            <svg viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; ARCOSUY &middot; Todos los derechos reservados &middot; <a href="https://arcosuy.com/privacidad/" style="color:inherit;opacity:0.7;">Privacidad</a></div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/59892630761" target="_blank" class="wa-float" title="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- LIGHTBOX / GALLERY -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" aria-label="Cerrar">×</button>
+  <button class="lightbox-prev" aria-label="Anterior">‹</button>
+  <button class="lightbox-next" aria-label="Siguiente">›</button>
+  <img loading="lazy" decoding="async" id="lightbox-img" src="" alt="" />
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script>
+  (function() {
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const counter = document.getElementById('lightbox-counter');
+    const closeBtn = lb.querySelector('.lightbox-close');
+    const prevBtn = lb.querySelector('.lightbox-prev');
+    const nextBtn = lb.querySelector('.lightbox-next');
+
+    let currentList = [];
+    let currentIdx = 0;
+
+    // Galleries: each gallery has its own image group + "Ver más" overlay.
+    // For cerramientos, treat each .subsection as a separate gallery.
+    // Use pill style for the subsections of cerramientos and for equipamiento.
+    const galleryGroups = [];
+    document.querySelectorAll('section[id]').forEach(section => {
+      if (section.id === 'cerramientos') {
+        section.querySelectorAll('.subsection').forEach((sub, idx) => {
+          const id = 'cerramientos-' + idx;
+          sub.dataset.galleryId = id;
+          galleryGroups.push({ id, root: sub, pill: true });
+        });
+      } else if (section.id === 'equipamiento') {
+        section.querySelectorAll('.eq-card[data-gallery-id]').forEach(card => {
+          galleryGroups.push({ id: card.dataset.galleryId, root: card, pill: true });
+        });
+      } else {
+        galleryGroups.push({ id: section.id, root: section, pill: false });
+      }
+    });
+
+    galleryGroups.forEach(group => {
+      const imgs = Array.from(group.root.querySelectorAll('.img-wrap img, .eq-card-ph img'));
+      if (imgs.length === 0) return;
+      imgs.forEach((img, i) => {
+        img.dataset.galleryId = group.id;
+        img.dataset.idx = i;
+        img.addEventListener('click', () => openGallery(group.id, i));
+      });
+
+      if (imgs.length < 2) return;
+      const visibleImgs = imgs.filter(img => {
+        const wrap = img.closest('.img-wrap, .eq-card-ph');
+        return wrap && wrap.offsetParent !== null;
+      });
+      if (visibleImgs.length === 0) return;
+      // Solo mostrar "Ver mas" si hay imagenes ocultas que revelar
+      if (visibleImgs.length >= imgs.length) return;
+      const lastVisibleImg = visibleImgs[visibleImgs.length - 1];
+      const lastWrap = lastVisibleImg.closest('.img-wrap, .eq-card-ph');
+      if (!lastWrap || lastWrap.querySelector('.more-overlay')) return;
+      const startIdx = imgs.indexOf(lastVisibleImg);
+      const overlay = document.createElement('div');
+      overlay.className = 'more-overlay' + (group.pill ? ' pill' : '');
+      overlay.innerHTML = '<div class="plus">+</div><div class="label">Ver más</div>';
+      overlay.addEventListener('click', e => {
+        e.stopPropagation();
+        openGallery(group.id, startIdx);
+      });
+      lastWrap.appendChild(overlay);
+    });
+
+    function openGallery(galleryId, idx) {
+      let root = document.getElementById(galleryId);
+      if (!root) root = document.querySelector('[data-gallery-id="' + galleryId + '"]');
+      if (!root) return;
+      currentList = Array.from(root.querySelectorAll('.img-wrap img, .eq-card-ph img'));
+      currentIdx = idx;
+      show();
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function show() {
+      const img = currentList[currentIdx];
+      lbImg.src = img.src;
+      lbImg.alt = img.alt || '';
+      counter.textContent = (currentIdx + 1) + ' / ' + currentList.length;
+      const showNav = currentList.length > 1;
+      prevBtn.style.display = showNav ? '' : 'none';
+      nextBtn.style.display = showNav ? '' : 'none';
+    }
+    function next() { currentIdx = (currentIdx + 1) % currentList.length; show(); }
+    function prev() { currentIdx = (currentIdx - 1 + currentList.length) % currentList.length; show(); }
+    function close() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    nextBtn.addEventListener('click', e => { e.stopPropagation(); next(); });
+    prevBtn.addEventListener('click', e => { e.stopPropagation(); prev(); });
+    closeBtn.addEventListener('click', e => { e.stopPropagation(); close(); });
+    lb.addEventListener('click', e => { if (e.target === lb) close(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowRight') next();
+      else if (e.key === 'ArrowLeft') prev();
+    });
+
+    // Touch swipe
+    let touchStartX = 0;
+    lb.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, {passive:true});
+    lb.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) { dx > 0 ? prev() : next(); }
+    }, {passive:true});
+  })();
+</script>
+
+<script>
+/* MM-NAV-JS */
+(function(){
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  document.querySelectorAll('.nav-menu .has-dropdown > a, .nav-menu .has-submenu > a').forEach(a => {
+    a.addEventListener('click', e => {
+      if (window.innerWidth > 1100) return;
+      e.preventDefault();
+      a.parentElement.classList.toggle('open');
+    });
+  });
+  document.querySelectorAll('.nav-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth > 1100) return;
+      if (a.parentElement.classList.contains('has-dropdown') || a.parentElement.classList.contains('has-submenu')) return;
+      menu && menu.classList.remove('open');
+      toggle && toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+
+<script>
+// Specs toggle — collapsible especificaciones per card
+(function(){
+  document.querySelectorAll('.specs-toggle').forEach(function(btn){
+    var content = btn.nextElementSibling;
+    var label = btn.querySelector('span');
+    if (!content || !content.classList.contains('specs-content')) return;
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      content.classList.toggle('open');
+      if (label) label.textContent = open ? 'Ver especificaciones' : 'Ocultar especificaciones';
+    });
+  });
+})();
+
+// Size selector — updates price display and WhatsApp link on click
+(function(){
+  document.querySelectorAll('.size-selector').forEach(function(sel){
+    var targetPrice = document.getElementById(sel.dataset.target);
+    var targetWa    = document.getElementById(sel.dataset.wa);
+    var waBase = targetWa ? targetWa.getAttribute('href').split('?')[0] : null;
+    var productName = 'tablero de chapa';
+    sel.querySelectorAll('button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        sel.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        if (targetPrice) targetPrice.textContent = btn.dataset.price;
+        if (targetWa && waBase) {
+          var msg = 'Hola, estoy interesado en el ' + productName + ' (' + btn.dataset.size + '). ¿Me pasás una cotización?';
+          targetWa.href = waBase + '?text=' + encodeURIComponent(msg);
+        }
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
