@@ -226,6 +226,103 @@
     .img-wrap.medium { min-height: 220px; }
     .img-wrap.short { min-height: 160px; }
 
+    /* ── CAROUSEL ── */
+    .carousel {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #162333;
+      touch-action: pan-y;
+    }
+    .carousel-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform .45s cubic-bezier(.22,.61,.36,1);
+      will-change: transform;
+    }
+    .carousel-slide {
+      flex: 0 0 100%;
+      min-width: 100%;
+      height: 100%;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+      user-select: none;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(10, 22, 35, .55);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s, opacity .2s;
+      z-index: 3;
+      opacity: 0;
+    }
+    .carousel:hover .carousel-btn,
+    .carousel:focus-within .carousel-btn { opacity: 1; }
+    .carousel-btn:hover { background: rgba(6, 157, 236, .85); }
+    .carousel-btn.prev { left: 12px; }
+    .carousel-btn.next { right: 12px; }
+    .carousel-dots {
+      position: absolute;
+      left: 0; right: 0; bottom: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      z-index: 3;
+    }
+    .carousel-dots button {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(255,255,255,.4);
+      padding: 0;
+      cursor: pointer;
+      transition: background .2s, width .25s;
+    }
+    .carousel-dots button.active {
+      background: var(--cyan);
+      width: 22px;
+      border-radius: 999px;
+    }
+    .carousel-counter {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(10,22,35,.6);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      z-index: 3;
+      letter-spacing: .5px;
+    }
+    @media (hover: none) {
+      .carousel-btn { opacity: 1; background: rgba(10, 22, 35, .5); }
+    }
+
     /* placeholder when no image */
     .img-ph {
       width: 100%;
@@ -874,8 +971,18 @@ body { padding-top: 42px; }
       </a>
     </div>
     <div class="split-imgs">
-      <div class="img-wrap" style="aspect-ratio:1/1;">
-        <img loading="lazy" decoding="async" src="img/chapa-1.jpg" alt="Tablero de basket de chapa" onerror="this.parentElement.innerHTML='<div class=\'img-ph\' style=\'aspect-ratio:1/1;min-height:0\'>🏀</div>'" />
+      <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Tablero de chapa - galería">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/chapa-1.jpg" alt="Tablero de basket de chapa 1" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/chapa-2.jpg" alt="Tablero de basket de chapa 2" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/chapa-3.jpg" alt="Tablero de basket de chapa 3" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/chapa-4.jpg" alt="Tablero de basket de chapa 4" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/chapa-5.jpg" alt="Tablero de basket de chapa 5" /></div>
+        </div>
+        <button type="button" class="carousel-btn prev" aria-label="Imagen anterior">&#8249;</button>
+        <button type="button" class="carousel-btn next" aria-label="Imagen siguiente">&#8250;</button>
+        <div class="carousel-counter"><span class="cur">1</span> / <span class="tot">5</span></div>
+        <div class="carousel-dots" role="tablist"></div>
       </div>
     </div>
   </div>
@@ -885,8 +992,17 @@ body { padding-top: 42px; }
 <section class="section" id="tablero-acrilico">
   <div class="split split-rev">
     <div class="split-imgs">
-      <div class="img-wrap" style="aspect-ratio:1/1;">
-        <img loading="lazy" decoding="async" src="img/acrilico-1.jpg" alt="Tablero de basket de acrílico" onerror="this.parentElement.innerHTML='<div class=\'img-ph\' style=\'aspect-ratio:1/1;min-height:0\'>🏀</div>'" />
+      <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Tablero de acrílico - galería">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/acrilico-1.jpg" alt="Tablero de basket de acrílico 1" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/acrilico-2.jpg" alt="Tablero de basket de acrílico 2" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/acrilico-3.jpg" alt="Tablero de basket de acrílico 3" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/acrilico-4.jpg" alt="Tablero de basket de acrílico 4" /></div>
+        </div>
+        <button type="button" class="carousel-btn prev" aria-label="Imagen anterior">&#8249;</button>
+        <button type="button" class="carousel-btn next" aria-label="Imagen siguiente">&#8250;</button>
+        <div class="carousel-counter"><span class="cur">1</span> / <span class="tot">4</span></div>
+        <div class="carousel-dots" role="tablist"></div>
       </div>
     </div>
     <div class="split-text">
@@ -948,8 +1064,18 @@ body { padding-top: 42px; }
       </a>
     </div>
     <div class="split-imgs">
-      <div class="img-wrap" style="aspect-ratio:1/1;">
-        <img loading="lazy" decoding="async" src="img/fibra-1.jpg" alt="Tablero de basket de fibra reglamentario" onerror="this.parentElement.innerHTML='<div class=\'img-ph\' style=\'aspect-ratio:1/1;min-height:0\'>🏀</div>'" />
+      <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Tablero de fibra reglamentario - galería">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/fibra-1.jpg" alt="Tablero de basket de fibra reglamentario 1" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/fibra-2.jpg" alt="Tablero de basket de fibra reglamentario 2" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/fibra-3.jpg" alt="Tablero de basket de fibra reglamentario 3" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/fibra-4.jpg" alt="Tablero de basket de fibra reglamentario 4" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/fibra-5.jpg" alt="Tablero de basket de fibra reglamentario 5" /></div>
+        </div>
+        <button type="button" class="carousel-btn prev" aria-label="Imagen anterior">&#8249;</button>
+        <button type="button" class="carousel-btn next" aria-label="Imagen siguiente">&#8250;</button>
+        <div class="carousel-counter"><span class="cur">1</span> / <span class="tot">5</span></div>
+        <div class="carousel-dots" role="tablist"></div>
       </div>
     </div>
   </div>
@@ -959,8 +1085,18 @@ body { padding-top: 42px; }
 <section class="section" id="tablero-vidrio">
   <div class="split split-rev">
     <div class="split-imgs">
-      <div class="img-wrap" style="aspect-ratio:1/1;">
-        <img loading="lazy" decoding="async" src="img/vidrio-1.jpg" alt="Tablero de basket de vidrio reglamentario" onerror="this.parentElement.innerHTML='<div class=\'img-ph\' style=\'aspect-ratio:1/1;min-height:0\'>🏀</div>'" />
+      <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Tablero de vidrio templado - galería">
+        <div class="carousel-track">
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/vidrio-1.jpg" alt="Tablero de basket de vidrio templado 1" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/vidrio-2.jpg" alt="Tablero de basket de vidrio templado 2" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/vidrio-3.jpg" alt="Tablero de basket de vidrio templado 3" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/vidrio-4.jpg" alt="Tablero de basket de vidrio templado 4" /></div>
+          <div class="carousel-slide"><img loading="lazy" decoding="async" src="img/vidrio-5.jpg" alt="Tablero de basket de vidrio templado 5" /></div>
+        </div>
+        <button type="button" class="carousel-btn prev" aria-label="Imagen anterior">&#8249;</button>
+        <button type="button" class="carousel-btn next" aria-label="Imagen siguiente">&#8250;</button>
+        <div class="carousel-counter"><span class="cur">1</span> / <span class="tot">5</span></div>
+        <div class="carousel-dots" role="tablist"></div>
       </div>
     </div>
     <div class="split-text">
@@ -1214,6 +1350,64 @@ body { padding-top: 42px; }
       btn.setAttribute('aria-expanded', open ? 'false' : 'true');
       content.classList.toggle('open');
       if (label) label.textContent = open ? 'Ver especificaciones' : 'Ocultar especificaciones';
+    });
+  });
+})();
+
+// Carousel — swipeable image gallery per product
+(function(){
+  document.querySelectorAll('[data-carousel]').forEach(function(car){
+    var track = car.querySelector('.carousel-track');
+    var slides = car.querySelectorAll('.carousel-slide');
+    var prev = car.querySelector('.carousel-btn.prev');
+    var next = car.querySelector('.carousel-btn.next');
+    var dotsWrap = car.querySelector('.carousel-dots');
+    var curEl = car.querySelector('.carousel-counter .cur');
+    var total = slides.length;
+    if (total < 2) return;
+    var idx = 0;
+
+    for (var i = 0; i < total; i++){
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.setAttribute('role', 'tab');
+      d.setAttribute('aria-label', 'Ir a imagen ' + (i+1));
+      if (i === 0) d.classList.add('active');
+      (function(n){ d.addEventListener('click', function(){ go(n); }); })(i);
+      dotsWrap.appendChild(d);
+    }
+    var dots = dotsWrap.querySelectorAll('button');
+
+    function go(n){
+      idx = (n + total) % total;
+      track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+      dots.forEach(function(d,i){ d.classList.toggle('active', i === idx); });
+      if (curEl) curEl.textContent = idx + 1;
+    }
+
+    prev && prev.addEventListener('click', function(){ go(idx - 1); });
+    next && next.addEventListener('click', function(){ go(idx + 1); });
+
+    // keyboard
+    car.setAttribute('tabindex', '0');
+    car.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowLeft'){ e.preventDefault(); go(idx - 1); }
+      if (e.key === 'ArrowRight'){ e.preventDefault(); go(idx + 1); }
+    });
+
+    // touch swipe
+    var startX = 0, dx = 0, dragging = false;
+    car.addEventListener('touchstart', function(e){
+      startX = e.touches[0].clientX; dx = 0; dragging = true;
+    }, {passive: true});
+    car.addEventListener('touchmove', function(e){
+      if (!dragging) return;
+      dx = e.touches[0].clientX - startX;
+    }, {passive: true});
+    car.addEventListener('touchend', function(){
+      if (!dragging) return;
+      dragging = false;
+      if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
     });
   });
 })();
